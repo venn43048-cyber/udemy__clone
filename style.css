@@ -1,0 +1,474 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Gabarito", sans-serif;
+    color: #1c1d1f;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    min-height: 70px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    color: #a435f0;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.explore-link {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #777;
+    border-radius: 30px;
+    padding: 12px 18px;
+    min-width: 100px;
+}
+
+.search-box span {
+    font-size: 23px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.explore-link:hover {
+    color: #a435f0;
+}
+
+.profile {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
+    background: #1c1d1f;
+    font-weight: bold;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 5%;
+    border-bottom: 1px solid #ddd;
+}
+
+.categories a {
+    color: white;
+    background: #a435f0;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.categories a:hover,
+.sale-button:hover {
+    background: #8710d8;
+}
+
+/* Sale Banner */
+.sale-banner {
+    margin: 24px auto;
+    width: 90%;
+    max-width: 1400px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px;
+    overflow: hidden;
+    border-radius: 10px;
+    color: white;
+    background: #101c2c;
+}
+
+.sale-content {
+    flex: 1;
+}
+
+.sale-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #d8b4fe;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.sale-content h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.sale-content h1 span {
+    color: #d8a5ff;
+}
+
+.sale-content p {
+    margin: 8px 0;
+    line-height: 1.5;
+    color: #f3f4f6;
+}
+
+.sale-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 13px 22px;
+    border-radius: 28px;
+    background: #a435f0;
+    color: white;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.sale-image {
+    width: 48%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Course sections */
+.course-section,
+.topics-section {
+    width: 90%;
+    max-width: 1400px;
+    margin: 32px auto;
+}
+
+.course-section h2,
+.topics-section h2 {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.section-subtitle {
+    color: #6a6f73;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 18px;
+}
+
+.course-card {
+    min-width: 0;
+    transition: transform 0.2s;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+}
+
+.course-card img {
+    display: block;
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #eee;
+}
+
+.course-card h3 {
+    font-size: 17px;
+    line-height: 1.35;
+    margin-top: 10px;
+}
+
+.instructor {
+    color: #6a6f73;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.rating {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rating span {
+    color: #e59819;
+    letter-spacing: 1px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.price del {
+    margin-left: 6px;
+    color: #6a6f73;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* Topics */
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.topics-grid a {
+    padding: 15px;
+    border: 1px solid #b9bec5;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.topics-grid a:hover {
+    color: #8710d8;
+    border-color: #a435f0;
+    background: #faf5ff;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 35px 5%;
+    margin-top: 50px;
+    background: #1c1d1f;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-brand {
+    text-align: right;
+}
+
+.footer-brand p {
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+    .navbar {
+        gap: 14px;
+        padding: 12px 3%;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a:nth-child(2) {
+        display: none;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sale-banner {
+        width: 94%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .explore-link {
+        display: none;
+    }
+
+    .search-box {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .nav-links {
+        margin-left: auto;
+        gap: 12px;
+    }
+
+    .nav-links a:nth-child(1),
+    .nav-links a:nth-child(2),
+    .nav-links a:nth-child(4) {
+        display: none;
+    }
+
+    .categories {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 12px 4%;
+    }
+
+    .categories a {
+        flex-shrink: 0;
+        font-size: 13px;
+        padding: 9px 15px;
+    }
+
+    .sale-banner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+        margin: 18px auto;
+    }
+
+    .sale-content h1 {
+        font-size: 32px;
+    }
+
+    .sale-banner img {
+        width: 100%;
+        height: 190px;
+    }
+
+    .course-section,
+    .topics-section {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .course-section h2,
+    .topics-section h2 {
+        font-size: 23px;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 12px;
+    }
+
+    .course-card img {
+        height: 115px;
+    }
+
+    .course-card h3 {
+        font-size: 15px;
+    }
+
+    .instructor,
+    .rating {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .topics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .topics-grid a {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 28px 5%;
+    }
+
+    .footer-links {
+        gap: 35px;
+    }
+
+    .footer-brand {
+        text-align: left;
+    }
+}
+
+@media (max-width: 360px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card img {
+        height: 190px;
+    }
+}
